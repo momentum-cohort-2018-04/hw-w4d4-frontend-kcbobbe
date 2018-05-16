@@ -4,7 +4,9 @@
 
 For this app, we will pull data from the iTunes API. 
 
-You'll use this data to pull songs based on a user search that your user performs. Here is an idea of what the [end result](musicapp.jpg) should look like, though you can have fun with the design.
+You'll use this data to pull songs based on a user search that your user performs. Here is an idea of what the end result should look like, though you can have fun with the design.
+
+![end result](musicapp.jpg)
 
 Here are the steps you'll need to take in order to complete this project.
 
@@ -23,7 +25,7 @@ There will be some new concepts you'll need to work through on this project, so 
   - You'll need to research the `<audio>` tag for this part - [docs here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
   - **Hint**: _You'll need to dynamically change the `src` value_
 
-One hard part will be getting the song to play. Since you will be dynamically generating the HTML for your results, adding an event listener to each result can be tricky. One way to make this easier is to put your `click` event listener on a parent node (like a `div` around the entire results section) and then get the correct item clicked on in your event listener. This is called "event delegation" and here is a comprehensive [article on the technique].(https://davidwalsh.name/event-delegate)
+One hard part will be getting the song to play. Since you will be dynamically generating the HTML for your results, adding an event listener to each result can be tricky. One way to make this easier is to put your `click` event listener on a parent node (like a `div` around the entire results section) and then get the correct item clicked on in your event listener. This is called "event delegation" and here is a comprehensive [article on the technique](https://davidwalsh.name/event-delegate).
 
 ### Bonus steps
 
