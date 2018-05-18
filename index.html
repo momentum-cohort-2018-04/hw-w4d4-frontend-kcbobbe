@@ -18,35 +18,36 @@
     <!-- text in search bar becomes search query and returns 
       results to each area -->
 
-    <form id = "add-music-form">
+    <form id = "add-music-form" name="musicForm">
 
       <div class = "input-field search-input-field">
         <input type = "text" placeholder = "Search" name = "search" id = "search">
       </div>
-      <div>
-        <button type="submit" id = "search-button" class="button">Search</button>
-      </div>
-      <form>
-        <p>Search by...</p>
+
+        <div>Search by...</div>
         <div>
           <input type="radio" id="Song"
-          name="search-type" value="song">
+          name="searchType" value="song">
           <label for="Song">Song</label>
 
           <input type="radio" id="Artist"
-          name="search-type" value="artist">
-          <label for="Artis">Artist</label>
+          name="searchType" value="artist">
+          <label for="Artist">Artist</label>
 
           <input type="radio" id="Album"
-          name="search-type" value="album">
+          name="searchType" value="album">
           <label for="Album">Album</label>
 
           <input type="radio" id="All"
-          name="search-type" value="all">
+          name="searchType" value="all">
           <label for="All">All</label>
+          
+          <div><button type="submit">Search</button></div>
         </div>
       </form>
-    </form>
+
+    
   <div id = "test-area"></div>
+  <div id = "log"></div>
 </body>
 </html>
