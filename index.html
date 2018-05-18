@@ -12,6 +12,41 @@
 <h1 class = "title">Katie's Super Awesome Music Player</h1>
 <body>
   <!--search bar  -->
+    <!-- text in search bar is search query -->
+
   <!-- search button -->
+    <!-- text in search bar becomes search query and returns 
+      results to each area -->
+
+    <form id = "add-music-form">
+
+      <div class = "input-field search-input-field">
+        <input type = "text" placeholder = "Search" name = "search" id = "search">
+      </div>
+      <div>
+        <button type="submit" id = "search-button" class="button">Search</button>
+      </div>
+      <form>
+        <p>Search by...</p>
+        <div>
+          <input type="radio" id="Song"
+          name="search-type" value="song">
+          <label for="Song">Song</label>
+
+          <input type="radio" id="Artist"
+          name="search-type" value="artist">
+          <label for="Artis">Artist</label>
+
+          <input type="radio" id="Album"
+          name="search-type" value="album">
+          <label for="Album">Album</label>
+
+          <input type="radio" id="All"
+          name="search-type" value="all">
+          <label for="All">All</label>
+        </div>
+      </form>
+    </form>
+  <div id = "test-area"></div>
 </body>
 </html>
