@@ -4,17 +4,39 @@ body{
   background-color:whitesmoke;
   text-align:center;
 }
+.input-group{
+  margin:0 auto 0 auto;
+  width:90%;
+}
 
 .title{
   color:#333333;
   text-align:center;
+  // background:linear-gradient(to
+  // bottom, rgba(200,200,200,1),
+  // rgba(200,200,200,.5));
+  padding:1rem 0rem 1rem 0rem;
+  margin-bottom:0;
 }
+
+
 
 .album-art{
-  text-align:center;
+  margin:auto;
+  padding:1rem;
+  // transition:.3s;
+  
 }
 
+.album-art:hover{
+  // background-color:rgba(200,200,200,1)
+  opacity:.6;
+  cursor:pointer;
+}
 
+// .radio-button{
+//   background-color:rgba(200,200,200,.9);
+// }
 .results-container{
   margin: auto;
 //   display:flex;
@@ -28,16 +50,73 @@ body{
 .box{
 width:30%;
 display:flex;
-flex-wrap:wrap;
+flex-direction:column;
+justify-content:center;
 border:2px solid black;
 margin:.5rem;
 }
 .artist-track{
-  margin:auto 2rem auto 2rem;
+  margin:auto;
   font-size:12px;
+  padding-bottom:0;
+  margin-bottom:0;
+  
 }
 
 .artist-name{
   font-weight:bold;
   
+}
+.album-art{
+  padding-bottom:.5rem;
+  min-width:100px;
+}
+//Sticky header
+.nowPlaying{
+  margin:0rem 1rem 1rem 1rem;
+  width:100%;
+  display:inline-flex;
+}
+
+.nowPlaying img{
+  display:none;
+}
+
+.nowPlaying .artist-track{
+  display:inline-flex;
+  justify-content: center;
+  margin:0 auto 0 auto;
+  padding-top:.5rem;
+  font-size:14px;
+}
+
+.nowPlaying .track-name{
+  margin-left:1rem;
+}
+.nowPlaying .artist-name{
+  margin-right:1rem;
+}
+
+audio{
+  width:90%;
+}
+
+
+header{
+  background:linear-gradient(to
+  bottom, rgba(200,200,200,1),
+  rgba(200,200,200,.9));
+  padding-bottom:1rem;
+  
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 210px;
 }

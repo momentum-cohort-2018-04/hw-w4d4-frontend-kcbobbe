@@ -45,7 +45,7 @@ function getData(query){
             <span class = 'artist-name'>${data.results[i].artistName}</span><br>
             <span class = 'track-name'>${data.results[i].trackCensoredName}</span>
           </div>
-          <audio controls><source src = ${data.results[i].previewUrl} type = "audio/aac"></audio></div>`)
+          </div>`)
         // console.log(SONGS)
         
     } document.getElementById('test-area').innerHTML = SONGS.join('')
@@ -53,8 +53,11 @@ function getData(query){
     for (var i=0; i<albumArtList.length; i++){
       albumArtList[i].addEventListener("click",function()
       {document.getElementById('music-player').innerHTML=
-      `<audio controls><source src = ${this.id}  
-      type = "audio/aac"></audio></div>`})
+      `<audio controls class=top-audio"><source src = ${this.id}  
+      type = "audio/aac"></audio><div class = "nowPlaying">${this.parentNode.innerHTML}</div>`
+      console.log(this.parentNode)
+    }
+    )
     //console.log(document.getElementById('test-area').innerHTML)
     }
 })}
@@ -109,11 +112,13 @@ function reply_click(){
 
 
 
-function clickPlay(songId){
-  document.getElementById('music-player').innerHTML=
-  `<audio controls><source src = ${songId}  
-  type = "audio/aac"></audio></div>`
-}
+// function clickPlay(songId){
+//   console.log('hi')
+  // document.getElementById('music-player').innerHTML=
+  // `<audio controls><source src = ${songId}  
+  // type = "audio/aac"></audio></div>`
+  
+// }
 
 
 
@@ -130,3 +135,21 @@ console.log(SONGS[0])
   // https://itunes.apple.com/search?term=${query}&entity=allArtist&attribute=allArtistTerm
 
   //use array index . url
+
+  // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
