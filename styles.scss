@@ -1,5 +1,8 @@
+
+
 body{
   background-color:whitesmoke;
+  text-align:center;
 }
 
 .title{
@@ -11,6 +14,30 @@ body{
   text-align:center;
 }
 
-#test-area{
+
+.results-container{
+  margin: auto;
+//   display:flex;
+  display:flex;
+  flex-wrap:wrap;
   padding:10px;
+  text-align:center;
+  justify-content: center;
+}
+
+.box{
+width:30%;
+display:flex;
+flex-wrap:wrap;
+border:2px solid black;
+margin:.5rem;
+}
+.artist-track{
+  margin:auto 2rem auto 2rem;
+  font-size:12px;
+}
+
+.artist-name{
+  font-weight:bold;
+  
 }

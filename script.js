@@ -20,6 +20,7 @@ document.getElementById('add-music-form').addEventListener('submit',onSubmit)
 // .addEventListner('submit', onSubmit)
 
 function getData(query){
+  SONGS=[]
   request.get(`https://itunes.apple.com/search?term=${query}`)
     .then (function a(result){
       var data= (JSON.parse(result.text))
@@ -29,12 +30,16 @@ function getData(query){
         console.log(data.results[i])
         // document.getElementById('test-area').innerHTML = 
         SONGS.push(
-        `<span class = 'artist-name'>${data.results[i].artistName}</span><br>
-        <span class = 'track-name'>${data.results[i].trackCensoredName}</span><br>
-        <img class = 'album-art' src=${data.results[i].artworkUrl100}><br>
-        <audio controls class='sample'><source src = ${data.results[i].previewUrl} type = "audio/aac"></audio><br>`)
-        console.log(data.results[0])
+        `<div class="box">
+          <img class = 'album-art' src=${data.results[i].artworkUrl100}>
+          <div class = "artist-track">
+            <span class = 'artist-name'>${data.results[i].artistName}</span><br>
+            <span class = 'track-name'>${data.results[i].trackCensoredName}</span>
+          </div>
+          <audio controls><source src = ${data.results[i].previewUrl} type = "audio/aac"></audio></div>`)
+        // console.log(SONGS)
     } document.getElementById('test-area').innerHTML = SONGS.join('')
+    console.log(document.getElementById('test-area').innerHTML)
   })
 }
 // var form = document.getElementById("radio-form")
@@ -87,3 +92,5 @@ for (var i = 0; i < radioChoice.length; i++) {
   //   console.log('click')
     
   // })
+
+  // `https://itunes.apple.com/search?term=${query}&entity=allArtist&attribute=allArtistTerm
