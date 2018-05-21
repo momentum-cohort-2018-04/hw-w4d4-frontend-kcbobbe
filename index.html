@@ -1,61 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
   <link rel="stylesheet" href="styles.scss">
-  <script src = "script.js" defer></script>
-  <title>Music</title>
+  <script src="script.js" defer></script>
+  <title>Music Player</title>
 </head>
+
 <body>
-  <header id = "myHeader">
-  <h1 class = "title">Katie's Super Awesome Music Player</h1>
-  <div id ="music-player-title"></div>
-  <div id="music-player"></div>
-
-  <!--search bar  -->
-    <!-- text in search bar is search query -->
-
-  <!-- search button -->
-    <!-- text in search bar becomes search query and returns 
-      results to each area -->
-
-    <form id = "add-music-form" name="musicForm">
-
-      <div class = "input-group search-input-field">
-        <input type = "text" placeholder = "Enter name of song or artist" name = "search" id = "search">
-        <button type="submit" class = "button">Submit</button>
+  <header id="myHeader">
+    <h1 class="title">The Search-N-Sample™ Music Player</h1>
+    <div id="music-player-title"></div>
+    <div id="music-player"></div>
+    <form id="add-music-form" name="musicForm">
+      <div class="input-group search-input-field">
+        <input type="text" placeholder="Enter name of song or artist" name="search" id="search">
+        <button type="submit" class="button">Submit</button>
       </div>
-    
-
-        <!-- <div>Search by...</div>
-        <div class = "radio-button">
-          <input type="radio" id="Song"
-          name="searchType" value="song">
-          <label for="Song">Song</label>
-
-          <input type="radio" id="Artist"
-          name="searchType" value="artist">
-          <label for="Artist">Artist</label>
-
-          <input type="radio" id="Album"
-          name="searchType" value="album">
-          <label for="Album">Album</label>
-
-          <input type="radio" id="All"
-          name="searchType" value="all">
-          <label for="All">All</label> -->
-          
-      </form>
+    </form>
   </header>
-  <main class = "content">
-  <div id = "test-area" class ="results-container"></div>
-  <div id = "log"></div>
-  <div id = "test-img"></div>
-  <!-- <div><audio controls class="sample"><source src =`${data.results[i].previewUrl}` type = "audio/aac"></audio></div> -->
+
+  <main class="content">
+    <div id="song-results" class="results-container"></div>
+    <div id="log"></div>
+    <div id="test-img"></div>
   </main>
 
-  </body>
+</body>
+
 </html>
