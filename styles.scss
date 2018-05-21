@@ -1,77 +1,65 @@
-
-
 body{
-  background-color:whitesmoke;
+  background-color: rgb(240,240,240);
   text-align:center;
 }
 .input-group{
   margin:0 auto 0 auto;
-  width:90%;
+  width:80%;
 }
 
 .title{
   color:#333333;
   text-align:center;
-  // background:linear-gradient(to
-  // bottom, rgba(200,200,200,1),
-  // rgba(200,200,200,.5));
+  font-size:24px;
   padding:1rem 0rem 1rem 0rem;
   margin-bottom:0;
 }
 
-
-
-.album-art{
-  margin:auto;
-  padding:1rem;
-  // transition:.3s;
-  
-}
-
-.album-art:hover{
-  // background-color:rgba(200,200,200,1)
-  opacity:.6;
-  cursor:pointer;
-}
-
-// .radio-button{
-//   background-color:rgba(200,200,200,.9);
-// }
 .results-container{
-  margin: auto;
-//   display:flex;
   display:flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  margin: auto;
   padding:10px;
   text-align:center;
   justify-content: center;
 }
 
+
+
 .box{
-width:30%;
+width:45%;
 display:flex;
 flex-direction:column;
 justify-content:center;
 border:2px solid black;
 margin:.5rem;
+background-color:rgb(230,230,230);
 }
+
+.album-art{
+  margin:auto;
+  padding:1rem 1rem .5rem 1rem;;
+  min-width:100px;
+  transition:.2s;
+}
+
+.album-art:hover{
+  opacity:.6;
+  cursor:pointer;
+}
+
 .artist-track{
   margin:auto;
   font-size:12px;
   padding-bottom:0;
   margin-bottom:0;
-  
 }
 
 .artist-name{
   font-weight:bold;
-  
 }
-.album-art{
-  padding-bottom:.5rem;
-  min-width:100px;
-}
-//Sticky header
+
+
 .nowPlaying{
   margin:0rem 1rem 1rem 1rem;
   width:100%;
@@ -91,22 +79,24 @@ margin:.5rem;
 }
 
 .nowPlaying .track-name{
-  margin-left:1rem;
+  margin: 0 1rem 0 1rem;
 }
 .nowPlaying .artist-name{
-  margin-right:1rem;
+  margin: 0 1rem 0 1rem;
 }
 
 audio{
-  width:90%;
+  width:80%;
 }
 
 
-header{
+
+#myHeader{
   background:linear-gradient(to
-  bottom, rgba(200,200,200,1),
-  rgba(200,200,200,.9));
+  bottom, rgb(240,240,240),rgb(200,200,200)
+  );
   padding-bottom:1rem;
+  // border-bottom:2px solid black;
   
 
 }
@@ -118,5 +108,35 @@ header{
 }
 
 .sticky + .content {
-  padding-top: 210px;
+  padding-top: 200px;
+}
+
+@media screen and (min-width:992px){
+  .title{
+    font-size:35px;
+  }
+  .results-container{
+    margin: auto;
+  //   display:flex;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    padding:10px;
+    text-align:center;
+    justify-content: center;
+  }
+  .box{
+    width:20%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border:2px solid black;
+    margin:.5rem;
+    }
+  .nowPlaying .track-name{
+    margin-left:1rem;
+  }
+  .nowPlaying .artist-name{
+    margin-right:1rem;
+  }
 }
